@@ -1,0 +1,1 @@
+mongod --port 12017 --dbpath D:\MongoDB\data\db 

@@ -1,0 +1,9 @@
+1. admin
+  db.createUser({ user: "admin", pwd: passwordPrompt(), roles:[{ role: "readWrite", db: "projectDB"}]})
+  db.createUser({ user: "admin", pwd: passwordPrompt(), roles: [ { role: "userAdminAnyDatabase", db: "admin" }, "readWriteAnyDatabase" ]})	
+2. guest
+  db.createUser({ user: "guest", pwd: "123456", roles:[{ role: "read", db: "projectDB"}] })
+
+3. to <auth>
+  use projectDB
+  db.auth("admin", passwordPromt())
